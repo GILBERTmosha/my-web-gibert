@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CAMERA SHOP</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:lavender;
+  text-align:center;
+}
+
+/* HEADER */
+header{
+  padding:30px;
+  background:purple;
+  color:white;
+}
+
+/* PRODUCTS */
+.products{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  width:250px;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.price{
+  color:purple;
+  font-weight:bold;
+}
+
+button{
+  background:purple;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:darkviolet;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>WELCOME TO CAMERA SHOP</h1>
+  <p>Best Cameras at Affordable Prices</p>
+</header>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+  <div class="card">
+    <img src="camera1.jfif" alt="Camera 1">
+    <h3>Canon Camera</h3>
+    <p class="price">Tsh 750,000</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="camera2.jfif" alt="Camera 2">
+    <h3>Nikon Camera</h3>
+    <p class="price">Tsh 680,000</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="camera3.jfif" alt="Camera 3">
+    <h3>Sony Camera</h3>
+    <p class="price">Tsh 820,000</p>
+    <button>Buy Now</button>
+  </div>
+
+</div>
+
+</body>
+</html>

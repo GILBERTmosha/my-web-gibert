@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COVER SHOP</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:honeydew;
+  text-align:center;
+}
+
+/* HEADER */
+header{
+  padding:30px;
+  background:green;
+  color:white;
+}
+
+/* PRODUCTS */
+.products{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  width:250px;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.price{
+  color:green;
+  font-weight:bold;
+}
+
+button{
+  background:green;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:darkgreen;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>WELCOME TO COVER SHOP</h1>
+  <p>Best Phone Covers at Affordable Prices</p>
+</header>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+  <div class="card">
+    <img src="cover1.jfif" alt="Cover 1">
+    <h3>Samsung Cover</h3>
+    <p class="price">Tsh 15,000</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="cover2.jfif" alt="Cover 2">
+    <h3>iPhone Cover</h3>
+    <p class="price">Tsh 20,000</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="cover3.jfif" alt="Cover 3">
+    <h3>Universal Cover</h3>
+    <p class="price">Tsh 10,000</p>
+    <button>Buy Now</button>
+  </div>
+
+</div>
+
+</body>
+</html>
