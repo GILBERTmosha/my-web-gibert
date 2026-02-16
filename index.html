@@ -2,38 +2,54 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Log In Place</title>
+<title>Login Form</title>
 
 <style>
 
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
   font-family: Arial, sans-serif;
+  height:100vh;
+  overflow:hidden;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
-  overflow:hidden;
 }
 
-/* ===== Background Video ===== */
-#bg-video{
+/* ===== FULL SCREEN VIDEO ===== */
+video{
   position:fixed;
-  right:0;
-  bottom:0;
-  min-width:50%;
-  min-height:50%;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
   object-fit:cover;
   z-index:-1;
 }
 
-/* ===== Form Styling ===== */
+/* ===== Dark Overlay (Professional Look) ===== */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+  z-index:-1;
+}
+
+/* ===== Form ===== */
 form{
   background:rgba(255,255,255,0.9);
   padding:25px;
   width:350px;
   border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+  box-shadow:0 8px 20px rgba(0,0,0,0.5);
 }
 
 legend{
@@ -46,22 +62,9 @@ legend{
 input, select{
   width:100%;
   padding:8px;
-  margin-top:5px;
-  margin-bottom:15px;
+  margin-bottom:12px;
   border-radius:8px;
   border:1px solid #ccc;
-  outline:none;
-  transition:0.3s;
-}
-
-input:focus, select:focus{
-  border-color:#4facfe;
-  box-shadow:0 0 5px #4facfe;
-}
-
-.gender{
-  width:auto;
-  margin-right:10px;
 }
 
 button{
@@ -84,41 +87,26 @@ button:hover{
 
 <body>
 
-<!-- Background Video -->
-<video autoplay muted loop id="bg-video">
-  <source src="video.mp4" type="video/mp4" >
+<video autoplay muted loop>
+  <source src="t.mp4" type="video/mp4">
 </video>
 
-<form action="MENU.html">
+<div class="overlay"></div>
+
+<form>
   <fieldset>
     <legend>YOUR INFORMATION</legend>
 
-    <label for="fname">FIRST NAME :</label>
-    <input type="text" name="fname" id="fname" placeholder="YOUR FIRST NAME" required>
-
-    <label for="lname">LAST NAME :</label>
-    <input type="text" name="lname" id="lname" placeholder="YOUR LAST NAME" required>
-
-    <label for="email">EMAIL :</label>
-    <input type="email" name="email" id="email" placeholder="YOUR EMAIL" required>
-
-    <label for="password">PASSWORD :</label>
-    <input type="password" name="password" id="password" placeholder="YOUR PASSWORD" required>
-
-    <label>GENDER</label><br>
-    <input type="radio" name="gender" value="Male" class="gender"> Male
-    <input type="radio" name="gender" value="Female" class="gender"> Female
-    <br><br>
+    <input type="text" placeholder="FIRST NAME" required>
+    <input type="text" placeholder="LAST NAME" required>
+    <input type="email" placeholder="EMAIL" required>
+    <input type="password" placeholder="PASSWORD" required>
 
     <select required>
       <option value="">Select Country</option>
       <option>Tanzania</option>
-      <option>Uganda</option>
-      <option>Burundi</option>
-      <option>Egypt</option>
       <option>Kenya</option>
-      <option>Congo</option>
-      <option>Malawi</option>
+      <option>Uganda</option>
     </select>
 
     <button type="submit">LOG IN</button>
